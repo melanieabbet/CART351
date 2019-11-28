@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Tinos:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="bordertop">
+      <div class="rond">
+      </div>
+    </div>
+    <div class="baserond">
+      <div class="element" id="element">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="style" id="styleone">
+      </div>
+      <div class="style" id="styletwo">
+      </div>
+      <div class="style" id ="stylethree">
+      </div>
+    </div>
+
+<div class="slidecontainer">
+  <h1 id="size">Size</h1>
+  <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+</div>
+<div class="choice" id= "two">
+ <h1>Keyword</h1>
+</div>
+<div class="choice" id= "two">
+ <h1>Text</h1>
+</div>
+
+
+    <a href="one.html"><div class="buttonleft">
+      <h1>Delete</h1>
+    </div></a>
+    <a href="send.html"><div class="buttonright">
+      <h1>Done</h1>
+    </div></a>
+
+
+    <script>
+    var slider = document.getElementById("myRange");
+    var output = slider.value;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+      output = this.value;
+      console.log(output);
+      document.getElementById("element").style.width = output*2 + "px";
+      document.getElementById("element").style.height = output *2+ "px";
+      document.getElementById("element").style.margin = 145-output+"px";
+    }
+
+      document.getElementById("styleone").addEventListener("click", function(){
+      document.getElementById("element").style.backgroundColor = "white";
+    });
+    document.getElementById("styletwo").addEventListener("click", function(){
+    document.getElementById("element").style.backgroundColor = "black";
+    document.getElementById("element").style.border = "4px dotted white";
+  });
+  document.getElementById("stylethree").addEventListener("click", function(){
+  document.getElementById("element").style.backgroundColor = "black";
+  document.getElementById("element").style.border = "3px solid white";
+});
+
+    </script>
+
+  </body>
+</html>

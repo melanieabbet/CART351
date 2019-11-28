@@ -1,0 +1,238 @@
+a{
+  text-decoration: none;
+}
+
+body{
+  margin:0;
+  padding: 0;
+  background-color: black;
+}
+h1{
+  font-family: Tinos;
+  color: white;
+  font-size:6vw;
+  text-align: center;
+  margin:0;
+}
+.bordertop{
+height:14vw;
+background-color: white;
+display: flex;
+align-content: center;
+}
+header h1{
+color: black;
+padding-top: 4vw;
+padding-bottom: 4vw;
+margin-left: auto;
+margin-right: auto;
+}
+.choice{
+  box-sizing: border-box;
+  height:15vw;
+  padding-top: 4vw;
+  padding-bottom:4vw;
+  border: 1px solid white;
+  margin:6vw;
+
+  background-color: black;
+  index:1;
+  position: relative;
+}
+#one{
+  margin-top: 25vh;
+}
+.triangle {
+
+  width:0px;
+  height:0px;
+  margin:15vw auto;
+  margin-bottom: 0;
+  border-left: 1vw solid transparent;
+	border-right: 1vw solid transparent;
+	border-bottom: 3vw solid white;
+}
+.line{
+  position: fixed;
+  index:0;
+  width:50%;
+  height:70vh;
+  border-right: 0.5px solid white;
+}
+#logo{
+  position: fixed;
+  width: 15vw;
+  index:0;
+  bottom:8vh;
+  left:42.3vw;
+}
+
+
+.rond{
+box-sizing: border-box;
+width:10vw;
+background-color: black;
+height:10vw;
+margin-top: 2vw;
+margin-left: auto;
+margin-right: auto;
+border-radius: 9vw;
+}
+.rondcontain{
+box-sizing: border-box;
+display: flex;
+width:30vw;
+height:10vw;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+.addbutton{
+  width:30vw;
+  height: 30vw;
+  border:1px solid white;
+  border-radius:30vw;
+  margin: 35vw;
+  margin-top: 50vw;
+  margin-bottom: 10vw;
+}
+#plus{
+  font-size:15vw;
+  font-weight:lighter;
+  margin-top: 6vw;
+}
+
+.buttonleft{
+  position: fixed;
+  box-sizing: border-box;
+  width:28vw;
+  height:15vw;
+  bottom: 6vw;
+  left:6vw;
+  border:1px solid white;
+  padding: 3.5vw;
+}
+.baserond{
+  width:30vw;
+  height: 30vw;
+  border:1px solid white;
+  border-radius:30vw;
+  margin: 35vw;
+  margin-top: 6vw;
+  margin-bottom: 10vw;
+}
+.element{
+  box-sizing: border-box;
+  width:15vw;
+  height: 15vw;
+  margin:7.5vw;
+  border:1px solid white;
+  border-radius:30vw;
+}
+.container{
+height:15vw;
+}
+.style{
+  box-sizing: border-box;
+  width:15vw;
+  height: 15vw;
+  border:1px solid white;
+  border-radius:30vw;
+  margin: 0;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  display: flex;
+  float:  left;
+}
+#styleone{
+  margin-left: 15.5vw;
+  background-color: white;
+}
+#styletwo{
+  border: 4px dotted white;
+  background-color: black;
+}
+#stylethree{
+  border: 3px solid white;
+  background-color: black;
+}
+.slidecontainer {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 6vw;
+  padding-bottom: 0;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15vw;
+  background: black;
+  border: 1px solid white;
+
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15vw;
+  height: 15vw;
+  background: white;
+  cursor: pointer;
+}
+#size{
+  position: fixed;
+  box-sizing: border-box;
+  margin-left:39vw;
+  margin-top: 4vw;
+}
+.buttonright{
+  position: fixed;
+  box-sizing: border-box;
+  width:28vw;
+  height:15vw;
+  bottom: 6vw;
+  right:6vw;
+  border:1px solid white;
+  padding: 3.5vw;
+}
+.containerarrow{
+  top:42.5vw;
+  height: 55vh;
+  width: 100vw;
+  position: fixed;
+}
+#linesend{
+position: relative;
+width:50vw;
+height: 90%;
+border-right:1px solid white;
+}
+.triangledown {
+  position: relative;
+  width:0px;
+  height:0px;
+  margin:0vw auto;
+  margin-bottom: 0;
+  border-left: 1vw solid transparent;
+	border-right: 1vw solid transparent;
+	border-top: 3vw solid white;
+}
+#title{
+  margin-top:12vw;
+}
+p{
+  position: fixed;
+  top:25vh;
+  margin:6vw;
+  margin-top: 0;
+  background-color: black;
+  border:3px solid white;
+  color: white;
+  padding: 6vw;
+  font-size: 4vw;
+}

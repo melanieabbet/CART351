@@ -1,0 +1,123 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src = "libs/jquery-3.4.1.js"></script>
+    <script src = "Bubble.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Tinos:400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+  canvas{
+    background-image:url('file/fond2.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    index: -1;
+     background-size:100% 100%;
+  }
+  .indicateur{
+    background-color:black;
+    position:fixed;
+    index: 1;
+    width:36.5%;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom:6px;
+    border: 1px solid white;
+  }
+  h1{
+    font-family: Tinos;
+    color: white;
+    font-size:20px;
+  }
+  #one{
+    left:31.6%;
+    transform: rotate(-180deg);
+  }
+  #two{
+    bottom:0;
+    left:31.6%;
+  }
+  </style>
+
+    <script type="text/javascript">
+      $(document).ready (function(){
+        let canvas;
+        let context;
+
+        setupCanvas();
+
+        window.addEventListener("resize", resizeFunc);
+
+
+
+        let bubbleListOne =[];
+        let bubbleListTwo =[];
+
+        document.getElementById("one").addEventListener("click", function(){
+        bubbleListOne.push(new Bubble(50,130,Math.random(),Math.random(),context,canvas));
+        console.log(bubbleListOne[0]);
+       });
+
+       document.getElementById("two").addEventListener("click", function(){
+       bubbleListTwo.push(new Bubble(200,30,Math.random(),Math.random(),context,canvas));
+       console.log(bubbleListTwo);
+      });
+
+      requestAnimationFrame(run);
+      function run(){
+
+  context.clearRect(0,0,canvas.width,canvas.height);
+  for(i = 0; i <  bubbleListTwo.length ; i++){
+    bubbleListTwo[i].displayTwo();
+      bubbleListTwo[i].update();
+    }
+  for(i = 0; i <  bubbleListOne.length ; i++){
+    bubbleListOne[i].display();
+      bubbleListOne[i].update();
+    }
+
+
+
+  //recursive call
+  requestAnimationFrame(run);
+
+}
+
+
+
+
+        function resizeFunc(){
+        console.log("resize");
+        console.log(window.innerWidth);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        }
+
+        function setupCanvas(){
+        canvas = document.getElementById("Viscanvas");
+        context = canvas.getContext("2d");
+        //canvas.width = ;
+        console.log(canvas.width);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+
+  });
+
+    </script>
+    <div class="indicateur" id="one" >
+      <h1>One</h1>
+    </div>
+    <div class="indicateur" id="two" >
+      <h1>Two</h1>
+    </div>
+   <canvas id="Viscanvas"</canvas>
+  </body>
+</html>
